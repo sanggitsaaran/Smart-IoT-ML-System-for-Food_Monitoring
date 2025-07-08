@@ -86,6 +86,65 @@ flowchart TD
 
 ---
 
+## 🧠 Machine Learning Models
+
+We use pre-trained `.pkl` models for freshness detection and classification.
+
+### 🔗 Download `.pkl` Model Files
+
+Get all required model files from the following Google Drive link:
+
+📂 **[Download Model Files (.pkl)](https://drive.google.com/drive/folders/1604KjtqgklhdLasJK6XrEO4D7VeBrUqS?usp=sharing)**
+
+> After downloading, **create a folder** named `models` inside `backend/vision/` and place the `.pkl` files there.
+
+---
+
+## 🍎 Dataset
+
+This project originally used a large fruits and vegetables dataset, which is **not included** in the repository due to size limits.
+
+Download it manually from:
+
+🔗 **[Kaggle – Fruits & Vegetables Dataset (12,000)](https://www.kaggle.com/datasets/muhriddinmuxiddinov/fruits-and-vegetables-dataset)**
+
+> After downloading, extract and place the dataset folder inside:
+> `backend/vision/models/Fruits_Vegetables_Dataset(12000)/`
+
+---
+
+## 🚀 Getting Started
+
+### 🔌 Hardware Setup
+
+* ESP32 with:
+
+  * MFRC522 RFID Module (SPI)
+  * DHT22 Sensor (GPIO)
+* Power supply + serial connection
+
+### 🧪 Backend (Flask)
+
+```bash
+cd backend/vision
+pip install -r ../../requirements.txt
+python app.py  # Runs on http://127.0.0.1:5002
+```
+
+Make sure the models folder and all required files exist before running the server.
+
+---
+
+### 🚀 Frontend (React)
+
+```bash
+cd frontend
+npm install
+npm run dev  # Runs on http://localhost:5173
+```
+
+---
+
 ## Result & Conclusion
 
 The integrated Smart IoT-ML system demonstrated:
@@ -97,3 +156,4 @@ The integrated Smart IoT-ML system demonstrated:
 This project offers a **scalable, efficient, and intelligent solution** for smart kitchen management, contributing to food sustainability and smarter household inventory systems.
 
 ---
+
